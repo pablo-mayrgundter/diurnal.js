@@ -1,0 +1,30 @@
+@import 'diurnal.css';
+
+
+body {
+  font-family: arial;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+
+body > * {
+  margin-left: 2em;
+}
+
+
+h1 {
+  padding: 1em;
+  margin: 0 0 1em 0;
+}
+
+
+ul {
+  width: 50%;
+}
+
+
+li {
+  padding: 1em;
+}

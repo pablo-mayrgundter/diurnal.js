@@ -1,0 +1,35 @@
+#diurnal-controls {
+  float: right;
+  margin: 2em;
+}
+
+
+button.diurnal-control {
+  height: 2em;
+  font-size: 1em;
+  text-align: top;
+  padding: 0.25em 0.5em;
+  border: solid 1px grey;
+}
+
+
+.diurnal-bright {
+  background: white;
+  color: black;
+}
+
+
+.diurnal-bright h1 {
+  background:lightgrey;
+}
+
+
+.diurnal-dark {
+  background: #0C1118;
+  color: white;
+}
+
+
+.diurnal-dark h1 {
+  background: #151B23;
+}
