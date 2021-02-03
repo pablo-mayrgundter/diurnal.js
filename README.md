@@ -1,5 +1,7 @@
 # diurnal.js
 
+[Live Demo Here](https://pablo-mayrgundter.github.io/diurnal.js/)
+
 Diurnal is a small utility to switch stylesheets for bright and dark settings.
 
 - **Bright** ☀
