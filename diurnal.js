@@ -1,3 +1,6 @@
+import * as Cookies from './lib/cookies.js/cookies.js';
+
+
 function attr (elt, attrName, attrValue) {
   elt.setAttribute(attrName, attrValue);
 }
@@ -24,7 +27,22 @@ export function bind() {
   diurnalElt.appendChild(brightElt);
   diurnalElt.appendChild(darkElt);
   const body = document.body;
-  brightElt.onclick = () => { attr(body, 'class', 'diurnal-bright'); };
-  darkElt.onclick = () => { attr(body, 'class', 'diurnal-dark'); };
-  document.body.insertBefore(diurnalElt, document.body.firstElementChild);
+  body.insertBefore(diurnalElt, body.firstElementChild);
+  brightElt.onclick = () => {
+    attr(body, 'class', 'diurnal-bright');
+    Cookies.setCookie('diurnal', 'bright');
+  };
+  darkElt.onclick = () => {
+    attr(body, 'class', 'diurnal-dark');
+    Cookies.setCookie('diurnal', 'dark');
+  };
+  const cookie = Cookies.getCookie('diurnal');
+  if (cookie) {
+    console.log('cookie found: ', cookie);
+    if (cookie == 'bright') {
+      attr(body, 'class', 'diurnal-bright');
+    } else if (cookie == 'dark') {
+      attr(body, 'class', 'diurnal-dark');
+    }
+  }
 }
