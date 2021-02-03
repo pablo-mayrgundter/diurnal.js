@@ -1,8 +1,10 @@
 # diurnal.js
 
-Diurnal is a small utility to switch stylesheets for bright and dark settings.
+[Live Demo Here](https://pablo-mayrgundter.github.io/diurnal.js/)
 
-- **Bright** ☼
+Diurnal is a small utility to switch stylesheets for bright and dark page styles.
+
+- **Bright** ☀
 
 If you're coding by the pool, remember to keep your laptop dry.  But
 also, it's gonna be hard to see the screen with a dark background and
