@@ -38,7 +38,6 @@ export function bind() {
   };
   const cookie = Cookies.getCookie('diurnal');
   if (cookie) {
-    console.log('cookie found: ', cookie);
     if (cookie == 'bright') {
       attr(body, 'class', 'diurnal-bright');
     } else if (cookie == 'dark') {
