@@ -2,8 +2,8 @@
 
 [Live Demo Here](https://pablo-mayrgundter.github.io/diurnal.js/)
 
-Diurnal is a small utility to switch stylesheets for bright and dark
-page styles.  A cookie is set to keep the setting for one day.
+Diurnal is a small (2KB) utility to switch stylesheets for bright and
+dark page styles.  A cookie is set to keep the setting for one day.
 
 - **Bright** ☀
 
