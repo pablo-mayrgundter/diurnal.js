@@ -34,9 +34,9 @@ Patches to normalize cross browser appreciated!
 
 ## Build
 
-Diurnal uses a local directory structure to allow direct browser loading of the source via index.html.
+Diurnal uses node to load its one library (cookies.js) and then directly links to it via es6 file imports.  This enables browser loading of the source via index.html and no need for a hot-watching server.
 
-A distribution may be built by using rollup:
+A single-file distribution may be built by using rollup:
 
 ```
 npm i
