@@ -1,5 +1,28 @@
-import * as Cookies from './lib/cookies.js/cookies.js';
+// Adapted to es6 from https://www.w3schools.com/js/js_cookies.asp.
 
+function setCookie(name, value, exdays=1) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  const expires = 'expires=' + d.toUTCString();
+  document.cookie = `${name}=${value};${expires};path=/`;
+}
+
+
+function getCookie(name) {
+  const namePrefix = name + '=';
+  const decodedCookie = decodeURIComponent(document.cookie);
+  const ca = decodedCookie.split(';');
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(namePrefix) == 0) {
+      return c.substring(namePrefix.length, c.length);
+    }
+  }
+  return '';
+}
 
 function attr (elt, attrName, attrValue) {
   elt.setAttribute(attrName, attrValue);
@@ -16,7 +39,7 @@ function elt(name, attrName, attrValue, text) {
 }
 
 
-export function bind() {
+function bind() {
   if (!document.body) {
     throw new Error('Document must contain body element');
   }
@@ -30,13 +53,13 @@ export function bind() {
   body.insertBefore(diurnalElt, body.firstElementChild);
   brightElt.onclick = () => {
     attr(body, 'class', 'diurnal-bright');
-    Cookies.setCookie('diurnal', 'bright');
+    setCookie('diurnal', 'bright');
   };
   darkElt.onclick = () => {
     attr(body, 'class', 'diurnal-dark');
-    Cookies.setCookie('diurnal', 'dark');
+    setCookie('diurnal', 'dark');
   };
-  const cookie = Cookies.getCookie('diurnal');
+  const cookie = getCookie('diurnal');
   if (cookie) {
     if (cookie == 'bright') {
       attr(body, 'class', 'diurnal-bright');
@@ -45,3 +68,5 @@ export function bind() {
     }
   }
 }
+
+export { bind };

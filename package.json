@@ -8,7 +8,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"TODO: add test\""
+    "test": "echo \"TODO: add test\"",
+    "build": "rollup -c --environment INCLUDE_DEPS,BUILD:production"
   },
   "repository": {
     "type": "git",
@@ -28,5 +29,9 @@
   "homepage": "https://github.com/pablo-mayrgundter/diurnal.js#readme",
   "dependencies": {
     "@pablo-mayrgundter/cookies.js": "^1.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "rollup": "^2.42.4"
   }
 }
