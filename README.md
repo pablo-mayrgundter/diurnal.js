@@ -2,6 +2,9 @@
 
 [Live Demo Here](https://pablo-mayrgundter.github.io/diurnal.js/)
 
+[![Node.js Package](https://github.com/pablo-mayrgundter/diurnal.js/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/pablo-mayrgundter/diurnal.js/actions/workflows/npm-publish.yml)
+
+
 Diurnal is a small (2KB) utility to switch stylesheets for bright and
 dark page styles.  A cookie is set to keep the setting for one day.
 
