@@ -31,3 +31,22 @@ focus), but no so bright it gives you a headache.
 - Firefox 84 - looks fine, sun symbol slightly smaller still
 
 Patches to normalize cross browser appreciated!
+
+## Build
+
+Diurnal uses a local directory structure to allow direct browser loading of the source via index.html.
+
+A distribution may be built by using rollup:
+
+```
+npm i
+npm run build
+
+> @pablo-mayrgundter/diurnal.js@1.0.4 build
+> rollup -c --environment INCLUDE_DEPS,BUILD:production
+
+diurnal.module.js → diurnal.js...
+created diurnal.js in 49ms
+```
+
+This will include all deps into diurnal.js.
