@@ -1,4 +1,4 @@
-import * as Diurnal from './diurnal.js';
+import * as Diurnal from './diurnal.module.js';
 
 
 Diurnal.bind();

@@ -1,4 +1,4 @@
-import * as Cookies from '@pablo-mayrgundter/cookies.js';
+import * as Cookies from './node_modules/@pablo-mayrgundter/cookies.js/cookies.js';
 
 
 function attr (elt, attrName, attrValue) {
