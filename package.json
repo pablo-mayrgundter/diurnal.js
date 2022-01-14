@@ -1,37 +1,33 @@
 {
   "name": "@pablo-mayrgundter/diurnal.js",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Diurnal is a small (2KB) utility to switch stylesheets for bright and dark page styles. A cookie is set to keep the setting for one day.",
   "main": "diurnal.js",
   "type": "module",
-  "directories": {
-    "lib": "lib"
-  },
+  "homepage": "https://github.com/pablo-mayrgundter/diurnal.js#readme",
+  "author": "Pablo Mayrgundter",
+  "license": "ISC",
   "scripts": {
     "test": "echo \"TODO: add test\"",
-    "build": "rollup -c --environment INCLUDE_DEPS,BUILD:production"
+    "build": "esbuild --bundle --format=esm --outfile=docs/bundle.js docs/index.js"
+  },
+  "dependencies": {
+    "@pablo-mayrgundter/cookies.js": "^1.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.9"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pablo-mayrgundter/diurnal.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pablo-mayrgundter/diurnal.js/issues"
   },
   "keywords": [
     "javascript",
     "css",
     "html",
     "calm"
-  ],
-  "author": "Pablo Mayrgundter",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pablo-mayrgundter/diurnal.js/issues"
-  },
-  "homepage": "https://github.com/pablo-mayrgundter/diurnal.js#readme",
-  "dependencies": {
-    "@pablo-mayrgundter/cookies.js": "^1.0.0"
-  },
-  "devDependencies": {
-    "@rollup/plugin-node-resolve": "^11.2.0",
-    "rollup": "^2.42.4"
-  }
+  ]
 }
